@@ -8,7 +8,7 @@ public class ClientProxy extends CommonProxy
 {
     public void registerRenderThings(){
 
-       RenderingRegistry.registerEntityRenderingHandler(EntityScath.class, new RenderScath(new ModelScath(), 0.3F));
+       //RenderingRegistry.registerEntityRenderingHandler(EntityScath.class, new RenderScath(new ModelScath(), 0.3F));
     }
 
 }

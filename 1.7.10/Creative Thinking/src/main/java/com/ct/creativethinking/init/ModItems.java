@@ -1,8 +1,10 @@
 package com.ct.creativethinking.init;
 
+import com.ct.creativethinking.creativetabs.CreativeTabCT;
 import com.ct.creativethinking.item.*;
 import com.ct.creativethinking.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
@@ -11,6 +13,9 @@ public class ModItems
     //Material
     //Todo Fix Mat
     //public static Item.ToolMaterial WolfamiteMat = EnumHelper.addToolMaterial("WolfamiteMat", 2, 1561, 7.0F, 5.0F, 14);
+
+
+
 
 
     public static final ItemCT CTLOGO = new ItemCTLOGO();
@@ -31,6 +36,11 @@ public class ModItems
     public static final ItemCT RawScathMeat = new ItemRawScathMeat();
     public static final ItemCT CookedScathMeat = new ItemCookedScathMeat();
     public static final ItemCT ScathPowder = new ItemScathPowder();
+
+
+    //Trees
+    //blockLog = new CTLog().setBlock
+
 
 
 
@@ -58,6 +68,8 @@ public class ModItems
           GameRegistry.registerItem(RawScathMeat, "RawScathMeat");
           GameRegistry.registerItem(CookedScathMeat, "CookedScathMeat");
           GameRegistry.registerItem(ScathPowder, "ScathPowder");
+
+
 
 //Tools
           //TODO for tools fix

@@ -1,4 +1,4 @@
-package net.minecraft.src;
+/*package net.minecraft.src;
 
 public class ModelScath extends ModelBase
 {
@@ -78,3 +78,4 @@ public class ModelScath extends ModelBase
     }
 
 }
+*/
