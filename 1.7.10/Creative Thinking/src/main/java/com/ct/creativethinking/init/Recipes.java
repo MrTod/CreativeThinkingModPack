@@ -17,6 +17,8 @@ public class Recipes
         ItemStack CTLOGO = new ItemStack(ModItems.CTLOGO);
 
         //Recipies
+
+        //CTLOGO
         GameRegistry.addRecipe(new ItemStack(ModBlocks.BlockCTLOGO),
                 "aa ",
                 "aa ",

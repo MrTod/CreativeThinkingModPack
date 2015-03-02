@@ -15,16 +15,12 @@ import net.minecraft.creativetab.CreativeTabs;
 public class ModBlocks
 {
 
+    //Tree
     public static Block blockLog;
     public static Block blockLeaf;
     public static Block blockSapling;
 
-
-
-    //public static final CTLog CTLog = new CTLog();
-
-
-    //Name
+    //Ore
     public static final BlockFireOpalOre FireOpalOre = new BlockFireOpalOre();
     public static final BlockBlueOpalOre BlueOpalOre = new BlockBlueOpalOre();
     public static final BlockPurpleOpalOre PurpleOpalOre = new BlockPurpleOpalOre();
@@ -35,27 +31,29 @@ public class ModBlocks
     public static final BlockTourmalineOre TourmalineOre = new BlockTourmalineOre();
     public static final BlockCitrineOre CitrineOre = new BlockCitrineOre();
     public static final BlockTigerIronOre TigerIronOre = new BlockTigerIronOre();
-    //public static final Block OpalFurnace;
-    //public static final Block OpalFurnaceActive;
 
-
-
-
-
-    //Mod Block
+    //ModBlocks
     public static final BlockCTLOGO BlockCTLOGO = new BlockCTLOGO();
 
 
-    //Register
+
+    //GAMEREGISTRY
     public static void init()
     {
 
+        //Tree
+        GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(blockLeaf, ItemLeafBlocks.class, blockLeaf.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(blockSapling, ItemSaplingBlocks, blockSapling.getUnlocalizedName().substring(5));
+
+        //Logs
         blockLog = new CTLog().setBlockName("Log").setCreativeTab(CreativeTabCT.CT_TAB);
+        //Leafs
         blockLeaf = new CTLeafs().setBlockName("Leaf").setCreativeTab(CreativeTabCT.CT_TAB);
+        //Saplings
         blockSapling = new CTSapling().setBlockName("Sapling").setCreativeTab(CreativeTabCT.CT_TAB);
 
-
-        //ORE
+        //Ores
         GameRegistry.registerBlock(FireOpalOre, "FireOpalOre");
         GameRegistry.registerBlock(BlueOpalOre, "BlueOpalOre");
         GameRegistry.registerBlock(PurpleOpalOre, "PurpleOpalOre");
@@ -66,17 +64,9 @@ public class ModBlocks
         GameRegistry.registerBlock(TourmalineOre, "TourmalineOre");
         GameRegistry.registerBlock(CitrineOre, "CirtineOre");
         GameRegistry.registerBlock(TigerIronOre, "TigerIronOre");
+
+        //ModBlocks
         GameRegistry.registerBlock(BlockCTLOGO, "BlockCTLOGO");
-
-        GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(blockLeaf, ItemLeafBlocks.class, blockLeaf.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(blockSapling, ItemSaplingBlocks, blockSapling.getUnlocalizedName().substring(5));
-
-        //GameRegistry.registerBlock(CTLog, "CTLog");
-
-
-
-
 
     }
 }

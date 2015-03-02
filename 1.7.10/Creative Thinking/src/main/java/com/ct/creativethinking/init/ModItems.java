@@ -10,15 +10,11 @@ import net.minecraft.item.Item;
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModItems
 {
-    //Material
-    //Todo Fix Mat
-    //public static Item.ToolMaterial WolfamiteMat = EnumHelper.addToolMaterial("WolfamiteMat", 2, 1561, 7.0F, 5.0F, 14);
 
-
-
-
-
+    //ModItem
     public static final ItemCT CTLOGO = new ItemCTLOGO();
+
+    //Ingots
     public static final ItemCT FireOpalIngot = new ItemFireOpalIngot();
     public static final ItemCT BlueOpalIngot = new ItemBlueOpalIngot();
     public static final ItemCT PurpleOpalIngot = new ItemPurpleOpalIngot();
@@ -29,29 +25,25 @@ public class ModItems
     public static final ItemCT TourmalineIngot = new ItemTourmalineIngot();
     public static final ItemCT CitrineIngot = new ItemCitrineIngot();
     public static final ItemCT TigerIronIngot = new ItemTigerIronIngot();
+
+    //Fuel
     public static final ItemCT Briquette = new ItemBriquette();
 
+    //Mobs
 
-    //Scath
+    //Scath Drops
     public static final ItemCT RawScathMeat = new ItemRawScathMeat();
     public static final ItemCT CookedScathMeat = new ItemCookedScathMeat();
     public static final ItemCT ScathPowder = new ItemScathPowder();
 
 
-    //Trees
-    //blockLog = new CTLog().setBlock
-
-
-
-
-
-    //Tools
-    //public static Item WolfamiteSword;
-
           public static void init()
       {
 
+          //ModItem
           GameRegistry.registerItem(CTLOGO, "CTLOGO");
+
+          //Ingots
           GameRegistry.registerItem(FireOpalIngot, "FireOpalIngot");
           GameRegistry.registerItem(BlueOpalIngot, "BlueOpalIngot");
           GameRegistry.registerItem(PurpleOpalIngot, "PurpleOpalIngot");
@@ -62,21 +54,16 @@ public class ModItems
           GameRegistry.registerItem(TourmalineIngot, "TourmalineIngot");
           GameRegistry.registerItem(CitrineIngot, "CitrineIngot");
           GameRegistry.registerItem(TigerIronIngot, "TigerIronIngot");
+
+          //Fuel
           GameRegistry.registerItem(Briquette, "Briquette");
+
+          //Mobs
 
           //Scath
           GameRegistry.registerItem(RawScathMeat, "RawScathMeat");
           GameRegistry.registerItem(CookedScathMeat, "CookedScathMeat");
           GameRegistry.registerItem(ScathPowder, "ScathPowder");
-
-
-
-//Tools
-          //TODO for tools fix
-          // //GameRegistry.registerItem(WolfamiteSword = new ItemWolfamiteSword(WolfamiteMat)
-          //GameRegistry.registerItem(WolfamiteSword, "WolfamiteSword");
-          //GameRegistry.registerItem(WolfamiteSword, "WolfamiteSword");
-
 
 
       }
