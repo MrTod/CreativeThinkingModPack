@@ -1,6 +1,7 @@
 package com.ct.creativethinking.biome.BiomeFeatures;
 
 
+
 import com.ct.creativethinking.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
@@ -27,12 +28,13 @@ public class WorldGenOreoTree extends WorldGenAbstractTree
 
     public WorldGenOreoTree(Block wood, Block leaves, int metaWood, int metaLeaves)
     {
-        this(wood, leaves, metaWood, metaLeaves,true, 4 ,3, false);
+        this(wood, leaves, metaWood, metaLeaves,false, 4 ,3, false);
     }
 
     public WorldGenOreoTree(Block wood, Block leaves, int metaWood, int metaLeaves, boolean doBlockNotify, int minTreeHeight, int randomTreeHeight, boolean vinesGrow)
     {
         super(doBlockNotify);
+
         this.wood = wood;
         this.leaves = leaves;
 

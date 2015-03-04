@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 public class ItemSaplingBlocks extends ItemBlock
 {
 
-    public static final String[] sapling = new String[] {"Oreo"};
+    public static final String[] saplings = new String[] {"Oreo"};
 
     public ItemSaplingBlocks(Block block){
         super(block);
@@ -16,10 +16,10 @@ public class ItemSaplingBlocks extends ItemBlock
     }
     public String getUnlocalizedName(ItemStack itemstack){
         int i = itemstack.getItemDamage();
-        if (i< 0 || i >= sapling.length){
+        if (i< 0 || i >= saplings.length){
             i =0;
         }
-        return super.getUnlocalizedName() + "." + sapling[i];
+        return super.getUnlocalizedName() + "." + saplings[i];
     }
     public int getMetadata (int meta){
         return meta;

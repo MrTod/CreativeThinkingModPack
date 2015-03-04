@@ -29,8 +29,8 @@ public class CTLog extends BlockLog
         this.field_150166_b = new IIcon[logs.length];
 
         for (int i = 0; i < this.field_150167_a.length; i++){
-            this.field_150167_a[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName() + logs[i]);
-            this.field_150166_b[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName() + logs[i] + "Top");
+            this.field_150167_a[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + logs[i]);
+            this.field_150166_b[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + logs[i] + "Top");
         }
     }
 }

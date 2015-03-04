@@ -87,7 +87,7 @@ public class CTSapling extends BlockSapling
             case 0:
                 break;
             case 1:
-                object = new WorldGenOreoTree(ModBlocks.blockLog, ModBlocks.blockLeaf, 1, 1, false, 7 , 10, false);
+                object = new WorldGenOreoTree(ModBlocks.blockLog, ModBlocks.blockLeaf, 1, 1, false, 8 , 15, false);
                 break;
             case 2:
                 break;

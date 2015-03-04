@@ -1,7 +1,7 @@
 package com.ct.creativethinking.init;
 
 
-import com.ct.creativethinking.biome.BiomeFeatures.CTLeafs;
+import com.ct.creativethinking.biome.BiomeFeatures.CTLeaf;
 import com.ct.creativethinking.biome.BiomeFeatures.CTLog;
 import com.ct.creativethinking.biome.BiomeFeatures.CTSapling;
 import com.ct.creativethinking.block.*;
@@ -42,16 +42,16 @@ public class ModBlocks
     {
 
         //Tree
-        GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(blockLeaf, ItemLeafBlocks.class, blockLeaf.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(blockSapling, ItemSaplingBlocks.class, blockSapling.getUnlocalizedName().substring(5));
-
         //Logs
         blockLog = new CTLog().setBlockName("Log").setCreativeTab(CreativeTabCT.CT_TAB);
         //Leafs
-        blockLeaf = new CTLeafs().setBlockName("Leaf").setCreativeTab(CreativeTabCT.CT_TAB);
+        blockLeaf = new CTLeaf().setBlockName("Leaf").setCreativeTab(CreativeTabCT.CT_TAB);
         //Saplings
         blockSapling = new CTSapling().setBlockName("Sapling").setCreativeTab(CreativeTabCT.CT_TAB);
+
+        GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(blockLeaf, ItemLeafBlocks.class, blockLeaf.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(blockSapling, ItemSaplingBlocks.class, blockSapling.getUnlocalizedName().substring(5));
 
         //Ores
         GameRegistry.registerBlock(FireOpalOre, "FireOpalOre");
