@@ -1,8 +1,7 @@
 package com.ct.creativethinking.biome.BiomeFeatures;
 
-import com.ct.creativethinking.CreativeThinking;
 import com.ct.creativethinking.creativetabs.CreativeTabCT;
-import com.ct.creativethinking.generation.WorldGen;
+import com.ct.creativethinking.init.ModBlocks;
 import com.ct.creativethinking.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -16,7 +15,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.WorldGenBigTree;
+import net.minecraft.world.gen.feature.WorldGenTrees;
+import net.minecraft.world.gen.feature.WorldGenerator;
 
 import java.util.List;
 import java.util.Random;
@@ -86,7 +87,7 @@ public class CTSapling extends BlockSapling
             case 0:
                 break;
             case 1:
-                object = WorldGenOreoTree();
+                object = new WorldGenOreoTree(ModBlocks.blockLog, ModBlocks.blockLeaf, 1, 1, false, 7 , 10, false);
                 break;
             case 2:
                 break;
@@ -131,17 +132,13 @@ public class CTSapling extends BlockSapling
         return world.getBlock(x, y, z) == this && (world.getBlockMetadata(x, y, z) & 7) == par1;
     }
 
-    /**
-     * Determines the damage on the item the block drops. Used in cloth and wood.
-     */
+
     public int damageDropped(int p_149692_1_)
     {
         return MathHelper.clamp_int(p_149692_1_ & 7, 0, 5);
     }
 
-    /**
-     * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
-     */
+
     @SideOnly(Side.CLIENT)
     public void getSubBlocks(Item item, CreativeTabs tab, List list)
     {
@@ -151,11 +148,11 @@ public class CTSapling extends BlockSapling
     }
 
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister p_149651_1_)
+    public void registerBlockIcons(IIconRegister iconRegister)
     {
         for (int i = 0; i < iconlength.length; ++i)
         {
-            iconlength[i] = p_149651_1_.registerIcon(this.getUnlocalizedName().substring(5) + saplings[i]);
+            iconlength[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName().substring(5) + saplings[i]);
         }
     }
 

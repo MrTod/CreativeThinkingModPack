@@ -8,6 +8,7 @@ import com.ct.creativethinking.proxy.IProxy;
 import com.ct.creativethinking.reference.Reference;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -26,16 +27,15 @@ public class CreativeThinking {
     public void preInit(FMLPreInitializationEvent event)
     {
 
-
-       ModBlocks.init();
        ModItems.init();
+       ModBlocks.init();
        ModWorldGeneration.init();
        Recipes.init();
 
     }
 
     @Mod.EventHandler
-    public void Init(FMLPreInitializationEvent event)
+    public void Init(FMLInitializationEvent event)
     {
         GameRegistry.registerFuelHandler(new Fuel());
         Entity.registerMonsters(EntityScath.class, "Scath");

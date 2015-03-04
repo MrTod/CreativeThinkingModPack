@@ -6,11 +6,11 @@ import com.ct.creativethinking.biome.BiomeFeatures.CTLog;
 import com.ct.creativethinking.biome.BiomeFeatures.CTSapling;
 import com.ct.creativethinking.block.*;
 import com.ct.creativethinking.creativetabs.CreativeTabCT;
-import com.ct.creativethinking.item.ItemLeafBlocks;
-import com.ct.creativethinking.item.ItemLogBlocks;
+import com.ct.creativethinking.block.ItemLeafBlocks;
+import com.ct.creativethinking.block.ItemLogBlocks;
+import com.ct.creativethinking.block.ItemSaplingBlocks;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class ModBlocks
 {
@@ -44,7 +44,7 @@ public class ModBlocks
         //Tree
         GameRegistry.registerBlock(blockLog, ItemLogBlocks.class, blockLog.getUnlocalizedName().substring(5));
         GameRegistry.registerBlock(blockLeaf, ItemLeafBlocks.class, blockLeaf.getUnlocalizedName().substring(5));
-        GameRegistry.registerBlock(blockSapling, ItemSaplingBlocks, blockSapling.getUnlocalizedName().substring(5));
+        GameRegistry.registerBlock(blockSapling, ItemSaplingBlocks.class, blockSapling.getUnlocalizedName().substring(5));
 
         //Logs
         blockLog = new CTLog().setBlockName("Log").setCreativeTab(CreativeTabCT.CT_TAB);

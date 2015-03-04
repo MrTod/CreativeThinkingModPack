@@ -1,5 +1,6 @@
 package com.ct.creativethinking.biome.BiomeFeatures;
 
+import com.ct.creativethinking.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockLog;
@@ -28,8 +29,8 @@ public class CTLog extends BlockLog
         this.field_150166_b = new IIcon[logs.length];
 
         for (int i = 0; i < this.field_150167_a.length; i++){
-            this.field_150167_a[i] = iconRegister.registerIcon(this.getTextureName() + logs[i]);
-            this.field_150166_b[i] = iconRegister.registerIcon(this.getTextureName() + logs[i] + "Top");
+            this.field_150167_a[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName() + logs[i]);
+            this.field_150166_b[i] = iconRegister.registerIcon(Reference.MOD_ID + ":" + this.getUnlocalizedName() + logs[i] + "Top");
         }
     }
 }

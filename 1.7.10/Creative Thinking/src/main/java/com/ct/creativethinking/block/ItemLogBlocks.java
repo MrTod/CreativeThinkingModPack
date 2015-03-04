@@ -1,4 +1,4 @@
-package com.ct.creativethinking.item;
+package com.ct.creativethinking.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;

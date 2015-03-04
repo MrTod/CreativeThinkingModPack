@@ -1,7 +1,7 @@
-package com.ct.creativethinking.biome.BiomeFeatures
+package com.ct.creativethinking.biome.BiomeFeatures;
 
-import java.util.Random;
-import com.ct.creativethinking.init.ModItems;
+
+import com.ct.creativethinking.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
 import net.minecraft.init.Blocks;
@@ -9,6 +9,8 @@ import net.minecraft.util.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.common.util.ForgeDirection;
+import java.util.Random;
+
 
 public class WorldGenOreoTree extends WorldGenAbstractTree
 {
@@ -25,10 +27,10 @@ public class WorldGenOreoTree extends WorldGenAbstractTree
 
     public WorldGenOreoTree(Block wood, Block leaves, int metaWood, int metaLeaves)
     {
-        this(wood, leaves, metaWood, metaLeaves,4 ,3, false);
+        this(wood, leaves, metaWood, metaLeaves,true, 4 ,3, false);
     }
 
-    public WorldGenOreoTree(Block wood, Block leaves, int metaWood, int metaLeaves,boolean doBlockNotify, int minTreeHeight, int randomTreeHeight, boolean vinesGrow)
+    public WorldGenOreoTree(Block wood, Block leaves, int metaWood, int metaLeaves, boolean doBlockNotify, int minTreeHeight, int randomTreeHeight, boolean vinesGrow)
     {
         super(doBlockNotify);
         this.wood = wood;
@@ -96,7 +98,7 @@ public class WorldGenOreoTree extends WorldGenAbstractTree
             {
                 Block block2 = p_76484_1_.getBlock(p_76484_3_, p_76484_4_ - 1, p_76484_5_);
 
-                boolean isSoil = block2.canSustainPlant(p_76484_1_, p_76484_3_, p_76484_4_ - 1, p_76484_5_, ForgeDirection.UP, (BlockSapling) ModItems.BlockSapling);
+                boolean isSoil = block2.canSustainPlant(p_76484_1_, p_76484_3_, p_76484_4_ - 1, p_76484_5_, ForgeDirection.UP, (BlockSapling) ModBlocks.blockSapling);
                 if (isSoil && p_76484_4_ < 256 - l - 1)
                 {
                     block2.onPlantGrow(p_76484_1_, p_76484_3_, p_76484_4_ - 1, p_76484_5_, p_76484_3_, p_76484_4_, p_76484_5_);
@@ -126,7 +128,7 @@ public class WorldGenOreoTree extends WorldGenAbstractTree
 
                                     if (block1.isAir(p_76484_1_, i2, k1, k2) || block1.isLeaves(p_76484_1_, i2, k1, k2))
                                     {
-                                        this.setBlockAndNotifyAdequately(p_76484_1_, i2, k1, k2, ModItems.BlockLeaf, this.metaLeaves);
+                                        this.setBlockAndNotifyAdequately(p_76484_1_, i2, k1, k2, ModBlocks.blockLeaf, this.metaLeaves);
                                     }
                                 }
                             }
@@ -139,7 +141,7 @@ public class WorldGenOreoTree extends WorldGenAbstractTree
 
                         if (block.isAir(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_) || block.isLeaves(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_))
                         {
-                            this.setBlockAndNotifyAdequately(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_, ModItems.BlockLog, this.metaWood);
+                            this.setBlockAndNotifyAdequately(p_76484_1_, p_76484_3_, p_76484_4_ + k1, p_76484_5_, ModBlocks.blockLog, this.metaWood);
 
                             if (this.vinesGrow && k1 > 0)
                             {

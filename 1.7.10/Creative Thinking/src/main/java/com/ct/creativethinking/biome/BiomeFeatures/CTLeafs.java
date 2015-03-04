@@ -1,5 +1,6 @@
 package com.ct.creativethinking.biome.BiomeFeatures;
 
+import com.ct.creativethinking.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockLeaves;
@@ -54,7 +55,7 @@ public class CTLeafs extends BlockLeaves
 
             for (int j = 0; j < leaftypes[i].length; ++j)
             {
-                this.field_150129_M[i][j] = iconRegister.registerIcon(leaftypes[i][j]);
+                this.field_150129_M[i][j] = iconRegister.registerIcon(Reference.MOD_ID + ":" + leaftypes[i][j]);
             }
         }
     }
